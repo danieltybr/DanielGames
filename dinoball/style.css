@@ -1,0 +1,88 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+background: #000;
+
+
+.title, .game {
+position: relative;
+height: calc(100vh - 10px);
+aspect-ratio: 4/3;
+margin: auto;
+overflow: hidden;
+}
+
+.title {
+background-color: #f4f4f4;
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+border-bottom: 10px solid #f4f4f4;
+}
+
+.title button {
+padding: 1px 5px;
+margin: 5px;
+background: #00cc00;
+border: none;
+border-radius: 5px;
+color: #fff;
+}
+
+.game {
+background-image: linear-gradient(deepskyblue, white);
+border-bottom: 10px solid green;
+}
+
+.sprite {
+min-height: 1.5cm;
+max-height: 1.5cm;
+aspect-ratio: 1/1;
+overflow: hidden;
+position: absolute;
+bottom: 0;
+}
+
+.player {
+left: 5%;
+}
+
+.jump {
+animation: jump 1000ms linear;
+}
+
+@keyframes jump {
+from {
+bottom: 0;
+}
+
+40%, 60% {
+bottom: 2.5cm;
+}
+
+to {
+bottom: 0;
+}
+}
+
+.obstacle {
+right: -15%;
+}
+
+.move {
+animation: move 1.5s infinite linear;
+}
+
+@keyframes move {
+from {
+right: -20%;
+}
+
+to {
+right: 120%;
+}
+}
